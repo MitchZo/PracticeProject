@@ -1,0 +1,15 @@
+﻿@model TaskItem
+
+@{
+    ViewData["Title"] = "EditTask";
+}
+
+<h1>EditTask</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(n => n.Name)
+    @Html.TextBoxFor(n => n.DueDate)
+    @Html.TextBoxFor(n => n.Description)
+    <input type="submit" name="FINISH" />
+}

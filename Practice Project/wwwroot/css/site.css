@@ -7,6 +7,11 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;

@@ -1,0 +1,26 @@
+﻿@model List<TaskItem> 
+@{
+    ViewData["Title"] = "Task";
+}
+
+<h1>Task</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Due Date</th>
+        <th>Description</th>
+        <th>Assigned To</th>
+        <th>Actions</th>
+    </tr>
+        @foreach (TaskItem task in Model)
+        {
+            <tr>
+                <td>@task.Name</td>
+                <td>@task.DueDate</td>
+                <td>@task.Description</td>
+                <td>@task.User.Name</td>
+                <td>@Html.ActionLink("Edit Task","EditTask",new { taskId = 214})</td>
+            </tr>
+        }
+    </table>
